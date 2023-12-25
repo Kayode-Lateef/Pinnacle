@@ -1,0 +1,266 @@
+@include('frontend.layouts.head')
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Start Header Top
+    ============================================= -->
+    @include('frontend.layouts.header')
+
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb
+    ============================================= -->
+    <div class="breadcrumb-area shadow dark text-center bg-fixed text-light" style="background-image: url(../source/assets/img/subject1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Subject Details</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#">Subject</a></li>
+                        <li class="active">English</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Course Details
+    ============================================= -->
+    <div class="course-details-area default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="course-details-info">
+                        <!-- Star Top Info -->
+                        <div class="top-info">
+                            <!-- Title-->
+                            <div class="title">
+                                <h2>English</h2>
+                            </div>
+                            <!-- End Title-->
+
+                            <!-- Thumbnail -->
+                            <div class="thumb">
+                                <img src="{{ asset('source/assets/img/english.jpg') }}" alt="Thumb">
+                            </div>
+                            <!-- End Thumbnail -->
+
+                            <!-- Course Meta -->
+                            <div class="course-meta">
+                                <div class="item author">
+                                    <div class="thumb">
+                                        <a href="#"><img alt="Thumb" src="{{ asset('source/assets/img/100x100.png') }}"></a>
+                                    </div>
+                                    <div class="desc">
+                                        <h4>Tutor</h4>
+                                        <span>{{ $curriculum->tutor_name }}</span>
+                                    </div>
+                                </div>
+                                <div class="item category">
+                                    <h4>Subject</h4>
+                                    <span>English</span>
+                                </div>
+                            </div>
+                            <!-- End Course Meta -->
+                        </div>
+                        <!-- End Top Info -->
+
+                        <!-- Star Tab Info -->
+                        <div class="tab-info">
+                            <!-- Tab Nav -->
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#tab1" aria-expanded="true">
+                                        Overview
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#tab2" aria-expanded="false">
+                                        Curriculum
+                                    </a>
+                                </li>
+                                <!-- <li>
+                                    <a data-toggle="tab" href="#tab3" aria-expanded="false">
+                                        Tutor
+                                    </a>
+                                </li> -->
+
+                            </ul>
+                            <!-- End Tab Nav -->
+                            <!-- Start Tab Content -->
+                            <div class="tab-content tab-content-info">
+                                <!-- Single Tab -->
+                                <div id="tab1" class="tab-pane fade active in">
+                                    <div class="info title">
+                                        <h4>Subjects Description</h4>
+                                        <p>
+                                            Calling nothing end fertile for venture way boy. Esteem spirit temper too say adieus who direct esteem. It esteems luckily mr or picture placing drawing no. Apartments frequently or motionless on reasonable projecting expression. Way mrs end gave tall walk fact bed.
+                                        </p>
+                                        <p>
+                                            Placing assured be if removed it besides on. Far shed each high read are men over day. Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had now those ought set often which. Or snug dull he show more true wish. No at many deny away miss evil. On in so indeed spirit an mother. Amounted old strictly but marianne admitted. People former is remove remain as.
+                                        </p>
+                                        <h4>Learning Outcomes</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-double"></i> Over 37 lectures and 55.5 hours of content!</li>
+                                            <li><i class="fas fa-check-double"></i> Testing Training Included.</li>
+                                            <li><i class="fas fa-check-double"></i> Best suitable for beginners to advanced level users and who learn faster when demonstrated.</li>
+                                            <li><i class="fas fa-check-double"></i> Course content designed by considering current software testing technology and the job market.</li>
+                                            <li><i class="fas fa-check-double"></i> Practical assignments at the end of every session.</li>
+                                            <li><i class="fas fa-check-double"></i> Practical learning experience with live project work and examples.</li>
+                                            <li><i class="fas fa-check-double"></i> Unlimited Resourses</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Single Tab -->
+
+                                <!-- Single Tab -->
+                                <div id="tab2" class="tab-pane fade">
+                                    <div class="info title">
+                                        <p>
+                                            Placing assured be if removed it besides on. Far shed each high read are men over day. Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had now those ought set often which. Or snug dull he show more true wish. No at many deny away miss evil. On in so indeed spirit an mother. Amounted old strictly but marianne admitted. People former is remove remain as.
+                                        </p>
+                                        <h4>Topics Covered</h4>
+                                        <!-- Start Course List -->
+                                        <div class="course-list-items acd-items acd-arrow">
+                                            <div class="panel-group symb" id="accordion">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#ac1">
+                                                                Grammar
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="ac1" class="panel-collapse collapse in">
+                                                        <div class="panel-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="item name">
+                                                                        <i class="fas fa-file""></i>
+                                                                        <span>Lesson 1.1</span>
+                                                                    </div>
+                                                                    <div class="item title">
+                                                                        <h5>Lexis</h5>
+                                                                    </div>
+
+                                                                </li>
+                                                                <li>
+                                                                    <div class="item name">
+                                                                        <i class="fas fa-file"></i>
+                                                                        <span>Lesson 1.2</span>
+                                                                    </div>
+                                                                    <div class="item title">
+                                                                        <h5>Comprehension</h5>
+                                                                    </div>
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Course List -->
+                                        <!-- Start Course List -->
+                                        <div class="course-list-items acd-items acd-arrow">
+                                            <div class="panel-group symb" id="accordion">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#ac2">
+                                                                Vocabulary
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="ac2" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="item name">
+                                                                        <i class="fas fa-file""></i>
+                                                                        <span>Lesson 1.1</span>
+                                                                    </div>
+                                                                    <div class="item title">
+                                                                        <h5>Synonyms</h5>
+                                                                    </div>
+
+                                                                </li>
+                                                                <li>
+                                                                    <div class="item name">
+                                                                        <i class="fas fa-file"></i>
+                                                                        <span>Lesson 1.2</span>
+                                                                    </div>
+                                                                    <div class="item title">
+                                                                        <h5>Antonyms</h5>
+                                                                    </div>
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Course List -->
+                                    </div>
+                                </div>
+                                <!-- End Single Tab -->
+
+
+
+
+                            </div>
+                            <!-- End Tab Content -->
+                        </div>
+                        <!-- End Tab Info -->
+                    </div>
+                </div>
+                <!-- Start Sidebar -->
+                <div class="col-md-4">
+                    <div class="sidebar">
+                        <aside>
+
+
+                            <!-- Sidebar Item -->
+                            <div class="sidebar-item category">
+                                <div class="title">
+                                    <h4>Subjects</h4>
+                                </div>
+                                <div class="sidebar-info">
+                                    <ul>
+                                        <li>
+                                            <a href="mathematics">Mathematics </a>
+                                        </li>
+                                        <li>
+                                            <a href="english">English</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End Sidebar Item -->
+
+                            <!-- Sidebar Item -->
+
+                            <!-- End Sidebar Item -->
+
+                        </aside>
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+        </div>
+    </div>
+    <!-- End Course Details -->
+    <!-- Start Footer
+    ============================================= -->
+    @include('frontend.layouts.footer')
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+============================================= -->
+@include('frontend.layouts.scripts')
