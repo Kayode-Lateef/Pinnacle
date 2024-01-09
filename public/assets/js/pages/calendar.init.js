@@ -3,13 +3,7 @@ var __webpack_exports__ = {};
 /*!*********************************************!*\
   !*** ./resources/js/pages/calendar.init.js ***!
   \*********************************************/
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Calendar init js
-*/
+
 !function ($) {
   "use strict";
 
@@ -173,7 +167,7 @@ File: Calendar init js
     });
   }, //init
   $.CalendarPage = new CalendarPage(), $.CalendarPage.Constructor = CalendarPage;
-}(window.jQuery), //initializing 
+}(window.jQuery), //initializing
 function ($) {
   "use strict";
 

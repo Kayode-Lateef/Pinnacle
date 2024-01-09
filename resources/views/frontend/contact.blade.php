@@ -89,7 +89,7 @@
                                 Occasional terminated insensible and inhabiting gay. So know do fond to half on. Now who promise was justice new winding
                             </p>
                         </div>
-                        <form action="assets/mail/contact.php" method="POST" class="contact-form">
+                        <form action="{{ asset('source/assets/mail/contact.php') }}" method="POST" class="contact-form">
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="form-group">
@@ -117,7 +117,7 @@
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="form-group comments">
-                                        <textarea class="form-control" id="comments" name="comments" placeholder="Tell Me About Courses *"></textarea>
+                                        <textarea class="form-control" id="comments" name="comments" placeholder="Message*"></textarea>
                                     </div>
                                 </div>
                             </div>

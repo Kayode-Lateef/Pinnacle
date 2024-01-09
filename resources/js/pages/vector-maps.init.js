@@ -1,10 +1,4 @@
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Vector Maps init Js File
-*/
+
 
 ! function($) {
 	"use strict";
@@ -109,7 +103,7 @@ File: Vector Maps init Js File
 				name : 'SÃ£o TomÃ© and PrÃ­ncipe'
 			}]
     });
-    
+
     $('#usa-vectormap').vectorMap({
 			map : 'us_merc_en',
 			backgroundColor : 'transparent',
@@ -119,7 +113,7 @@ File: Vector Maps init Js File
 				}
 			}
     });
-    
+
     $('#india-vectormap').vectorMap({
 			map : 'in_mill_en',
 			backgroundColor : 'transparent',
@@ -129,7 +123,7 @@ File: Vector Maps init Js File
 				}
 			}
     });
-    
+
     $('#australia-vectormap').vectorMap({
 			map : 'au_mill_en',
 			backgroundColor : 'transparent',
@@ -139,7 +133,7 @@ File: Vector Maps init Js File
 				}
 			}
     });
-    
+
     $('#chicago-vectormap').vectorMap({
 			map : 'us-il-chicago_mill_en',
 			backgroundColor : 'transparent',
@@ -159,7 +153,7 @@ File: Vector Maps init Js File
 				}
 			}
 		});
-    
+
     $('#canada-vectormap').vectorMap({
 			map : 'ca_lcc_en',
 			backgroundColor : 'transparent',

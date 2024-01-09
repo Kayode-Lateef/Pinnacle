@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        <a href="{{ url('index') }}" class="mb-5 d-block auth-logo">
+                        <a href="{{ route('home') }}" class="mb-5 d-block auth-logo">
                             <img src="{{ URL::asset('/assets/images/logo-2.png') }}" alt="" height="22"
                                 class="logo logo-dark">
                             <img src="{{ URL::asset('/assets/images/logo-2-white.png') }}" alt="" height="22"
@@ -112,7 +112,7 @@
                         <p>© <script>
                                 document.write(new Date().getFullYear())
 
-                            </script> Pinnacle. Crafted with <i class="mdi mdi-heart text-danger"></i> by KaytechIT</p>
+                            </script> Pinnacle
                     </div>
 
                 </div>

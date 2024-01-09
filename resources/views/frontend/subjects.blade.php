@@ -38,16 +38,21 @@
                         <div class="item">
                             <div class="thumb">
                                 <a href="{{ route('mathematics') }}">
-                                    <img src="{{ asset('source/assets/img/math.webp') }}" alt="Thumb">
+                                @if($mathematics && $mathematics->cover_image)
+                                    <img src="{{ asset('storage/'.$mathematics->cover_image) }}" alt="Mathematics Cover Image">
+                                @endif
+                                    <!-- <img src="{{ asset('source/assets/img/math.webp') }}" alt="Thumb"> -->
                                 </a>
 
                             </div>
                             <div class="info">
 
-                                <h4><a href="{{ route('mathematics') }}">Mathematics</a></h4>
+                                <h4><a href="{{ route('mathematics') }}">
+                                    {{ $mathematics ? $mathematics->name : 'Subject not available' }}
+                                </a></h4>
 
                                 <p>
-                                    Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.
+                                    {{ strip_tags($mathematics ? $mathematics->description : 'Description not available') }}
                                 </p>
 
                             </div>
@@ -59,16 +64,21 @@
                         <div class="item">
                             <div class="thumb">
                                 <a href="{{ route('english') }}">
-                                    <img src="{{ asset('source/assets/img/english.jpg') }}" alt="Thumb">
-                                </a>
+                                @if($english && $english->cover_image)
+                                    <img src="{{ asset('storage/'.$english->cover_image) }}" alt="English Cover Image">
+                                @endif
+
+                            </a>
 
                             </div>
                             <div class="info">
 
-                                <h4><a href="{{ route('english') }}">English</a></h4>
+                                <h4><a href="{{ route('english') }}">
+                                    {{ $english ? $english->name : 'Subject not available' }}
+                                </a></h4>
 
                                 <p>
-                                    Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.
+                                    {{ strip_tags($english ? $english->description : 'Description not available') }}
                                 </p>
 
                             </div>

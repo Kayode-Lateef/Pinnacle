@@ -8,23 +8,18 @@ use Illuminate\Http\Request;
 class TestimonialController extends Controller
 {
 
-    // Start Method
     public function index()
     {
         $testimonials = Testimonial::All();
         return view('superadmin.testimonial.index', compact('testimonials'));
     }
-    // End Method
 
-    // Start Method
     public function create()
     {
         return view('superadmin.testimonial.create');
     }
-    // End Method
 
 
-    // Start Method
     public function edit($id)
     {
         $testimonial = Testimonial::findOrFail($id);
@@ -32,7 +27,6 @@ class TestimonialController extends Controller
     }
 
 
-    // Start Method
     public function store(Request $request)
     {
         $request->validate([
@@ -56,10 +50,8 @@ class TestimonialController extends Controller
 
         return back()->with('success', 'Testimonial added successfully.');
     }
-    // End Method
 
 
-    // Start Method
     public function update(Request $request, $id)
     {
     $request->validate([
@@ -83,10 +75,10 @@ class TestimonialController extends Controller
 
     return redirect()->route('siteadmin.testimonial.index')->with('success', 'Testimonial updated successfully.');
     }
-    // End Method
 
 
-    // Start Method
+
+
     public function delete($id)
     {
         $testimonials = Testimonial::findOrFail($id);
@@ -94,6 +86,6 @@ class TestimonialController extends Controller
 
         return redirect()->route('siteadmin.testimonial.index')->with('success', 'Testimonial deleted successfully.');
     }
-    // End Method
+
 
 }

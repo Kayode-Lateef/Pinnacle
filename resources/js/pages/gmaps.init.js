@@ -1,10 +1,4 @@
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: gmaps init Js File
-*/
+
 
 var map;
 $(document).ready(function(){

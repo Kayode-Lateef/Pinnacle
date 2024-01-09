@@ -3,13 +3,7 @@ var __webpack_exports__ = {};
 /*!*************************************************!*\
   !*** ./resources/js/pages/file-manager.init.js ***!
   \*************************************************/
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: file manager init js
-*/
+
 //  line chart datalabel
 function getChartColorsArray(chartId) {
   if (document.getElementById(chartId) !== null) {

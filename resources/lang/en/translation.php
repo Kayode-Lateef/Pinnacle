@@ -106,7 +106,6 @@ return [
   "Level_2.1"=> "Level 2.1",
   "Level_2.2"=> "Level 2.2",
   "Search"=> "Search",
-  "Notifications"=> "Notifications",
   "Mark_read"=> "Mark all as read",
   "order_placed"=> "Your order is placed",
   "languages_grammar"=> "If several languages coalesce the grammar",
@@ -148,13 +147,9 @@ return [
   "Toasts" => "Toasts",
 
   "User_Management" => "User Management",
-  "User_List" => "User List",
   "Add_User" => "Add User",
+  "Edit_User" => "Edit User",
 
-  "Manage_Curriculum" => "Manage Curriculum",
-  "Curriculum" => "Curriculum",
-  "Add_Curriculum" => "Add Curriculum",
-  "Edit_Curriculum" => "Edit Curriculum",
   "Manage_Subject" => "Manage Subject",
   "Mathematics" => "Mathematics",
   "English" => "English",
@@ -167,8 +162,24 @@ return [
   "All_FAQs"=> "All FAQs",
   "Edit_FAQs"=> "Edit FAQs",
   "Events" => "Events",
-  "Add_Curriculum" => "Add Curriculum",
-  "Curriculum" => "Curriculum",
+  "Subject" => "Subject",
+  "View_Subject" => "View Subject",
+  "Add_Subject" => "Add Subject",
+  "Add_Learning_Outcome"=> "Add Learning Outcome",
+  "Learning_Outcome"=> "Learning Outcome",
+  "View_Learning_Outcome" => "View Learning Outcome",
+  "Topic" => "Topic",
+  "Add_Topic" => "Add Topic",
+  "View_Topic" => "View Topic",
+
+  "Sub_Topic" => "Sub Topic",
+  "Add_Sub_Topic" => "Add Sub Topic",
+  "Edit_Sub_Topic" => "Edit SubTopic",
+  "View_Sub_Topic" => "View SubTopic",
+
+  "Blogs"=> "Blogs",
+
+
 
 
 

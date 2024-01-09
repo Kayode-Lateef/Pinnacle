@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-
+use App\Models\Subject;
+use App\Models\Topic;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -47,9 +48,12 @@ class SuperAdminController extends Controller
     public function index()
     {
         $totalUsers = User::count(); // Count total Users
+        $totalsubjects = Subject::count(); // Count total Users
+        $totaltopics = Topic::count(); // Count total Users
+
 
         $users = User::all(); // Fetch all users
-        return view('superadmin.index', compact('users', 'totalUsers'));
+        return view('superadmin.index', compact('users', 'totalUsers', 'totalsubjects', 'totaltopics'));
     }
     // End Method
 
@@ -109,10 +113,7 @@ class SuperAdminController extends Controller
 
         return redirect()->back()->with('success', 'Profile updated successfully.');
     }
-    // End Method
 
-
-    // Start Method
     public function showUserList()
     {
         $totalUsers = User::count(); // Count total Users
@@ -121,18 +122,20 @@ class SuperAdminController extends Controller
 
         return view('superadmin.user-list', compact('users', 'totalUsers'));
     }
-    // End Method
 
-
-
-    // Start Method
     public function addUser()
     {
         return view('superadmin.add-user');
     }
-    // End Method
 
-    // Start Method
+    public function editUser(User $user)
+    {
+        $users = User::all(); // Fetch all users
+
+        return view('superadmin.edit-user', compact('user'));
+    }
+
+
     public function storeUser(Request $request)
     {
         $request->validate([
@@ -151,7 +154,37 @@ class SuperAdminController extends Controller
 
         return redirect()->route('siteadmin.users.list')->with('success', 'User added successfully.');
     }
-    // End Method
+
+
+    public function updateUser(Request $request, User $user)
+    {
+         // Prevent changing the role of a superadmin from the application
+        if ($user->role === 'superadmin') {
+            return redirect()->route('siteadmin.users.list')->with('error', 'Superadmin role cannot be changed.');
+        }
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
+            'role' => 'required|in:user,admin',
+        ]);
+
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'role' => $request->role,
+        ]);
+
+        return redirect()->route('siteadmin.users.list')->with('success', 'User updated successfully.');
+    }
+
+    public function deleteUser(User $user)
+    {
+        $user->delete();
+        return redirect()->route('siteadmin.users.list')->with('success', 'User deleted successfully.');
+    }
+
+
 
     // Start Method
     public function english()

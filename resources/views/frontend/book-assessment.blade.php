@@ -3,22 +3,25 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Start Header Top 
+    <!-- Start Header Top
     ============================================= -->
     @include('frontend.layouts.header')
 
     <!-- End Header -->
 
- <!-- Start Login 
+ <!-- Start Login
     ============================================= -->
     <div class="login-area default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <form action="#" id="register-form" class="white-popup-block">
-                        
-                        <div class="col-md-8 login-custom">
+
+                        <div class="col-md-12 login-custom">
                             <h4>Book your child's Skills Assessment </h4>
+                            <p>
+                                Please fill in your details below and your nearest centre will be in touch.
+                            </p>
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="form-group">
@@ -47,6 +50,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="form-group">
@@ -62,7 +66,7 @@
                                     </div>
                                 </div>
                             </div>
-                          
+
                             <div class="col-md-12">
                                 <div class="row">
                                     <button type="submit">
@@ -78,7 +82,7 @@
     </div>
     <!-- End Login Area -->
 
-     <!-- Start Footer 
+     <!-- Start Footer
     ============================================= -->
     @include('frontend.layouts.footer')
     <!-- End Footer -->

@@ -1,13 +1,6 @@
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Bootstrap Toasts Js
-*/
 
 
-//  Bootstrap Toast 
+//  Bootstrap Toast
 var toastTrigger = document.getElementById('liveToastBtn')
 var toastLiveExample = document.getElementById('liveToast')
 if (toastTrigger) {
@@ -19,7 +12,7 @@ if (toastTrigger) {
 }
 
 
-// Bordered Toast 
+// Bordered Toast
 
 var toastTrigger2 = document.getElementById("borderedToast1Btn");
 var toastLiveExample2 = document.getElementById("borderedToast1");

@@ -8,30 +8,23 @@ use Illuminate\Http\Request;
 class FaqController extends Controller
 {
 
-    // Start Method
     public function index()
     {
         $faqs = Faq::all();
         return view('superadmin.faq.index', compact('faqs'));
     }
-    // End Method
 
-    // Start Method
     public function create()
     {
         return view('superadmin.faq.create');
     }
-    // End Method
 
-    // Start Method
     public function edit($id)
     {
         $faqs = FAQ::findOrFail($id);
         return view('superadmin.faq.edit', compact('faqs'));
     }
-    // End Method
 
-    // Start Method
     public function store(Request $request)
     {
         $request->validate([
@@ -43,9 +36,7 @@ class FaqController extends Controller
 
         return back()->with('success', 'FAQ added successfully.');
     }
-    // End Method
 
-    // Start Method
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -61,11 +52,9 @@ class FaqController extends Controller
 
         return redirect()->route('siteadmin.faq.index')->with('success', 'FAQ updated successfully.');
     }
-    // End Method
 
 
 
-    // Start Method
     public function delete($id)
     {
         $faqs = FAQ::findOrFail($id);
@@ -73,5 +62,4 @@ class FaqController extends Controller
 
         return redirect()->route('siteadmin.faq.index')->with('success', 'FAQ deleted successfully.');
     }
-    // End Method
 }

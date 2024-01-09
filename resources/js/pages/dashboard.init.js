@@ -1,12 +1,4 @@
 
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: support@themesbrand.com
-File: Dashboard
-*/
-
 // get colors array from the string
 function getChartColorsArray(chartId) {
     if (document.getElementById(chartId) !== null) {
@@ -132,7 +124,7 @@ var chart = new ApexCharts(document.querySelector("#orders-chart"), options);
 chart.render();
 }
 
-// 
+//
 // Customers Chart
 //
 var RadialchartCustomersColors = getChartColorsArray("customers-chart");
@@ -173,7 +165,7 @@ var chart = new ApexCharts(document.querySelector("#customers-chart"), options);
 chart.render();
 }
 
-// 
+//
 // Growth Chart
 //
 var BarchartGrowthColors = getChartColorsArray("growth-chart");
@@ -297,7 +289,7 @@ var options = {
                     return y.toFixed(0) + " points";
                 }
                 return y;
-  
+
             }
         }
     },
@@ -305,7 +297,7 @@ var options = {
         borderColor: '#f1f1f1'
     }
   }
-  
+
   var chart = new ApexCharts(
     document.querySelector("#sales-analytics-chart"),
     options

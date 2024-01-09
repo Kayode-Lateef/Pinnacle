@@ -41,12 +41,7 @@
                     </a>
                 </li>
 
-                <!-- <li>
-                    <a href="{{ route('siteadmin.profile') }}" class="waves-effect">
-                        <i class="uil-user"></i>
-                        <span>@lang('translation.Profile')</span>
-                    </a>
-                </li> -->
+
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -59,71 +54,39 @@
                     </ul>
                 </li>
 
-                <!-- <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-book-open"></i>
-                        <span>@lang('translation.Manage_Subject')</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="mathematics">@lang('translation.Mathematics')</a></li>
-                        <li><a href="english">@lang('translation.English')</a></li>
-                    </ul>
-                </li> -->
-
-
-                <!-- <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-book-open"></i>
-                        <span>@lang('translation.Manage_Subject')</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.English')</a>
-                            <ul class="sub-menu" aria-expanded="true">
-                            <li><a href="{{ route('siteadmin.mathematics') }}">@lang('translation.Add_Curriculum')</a></li>
-                                <li><a href="{{ route('siteadmin.mathematics') }}">@lang('translation.Curriculum')</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Mathematics')</a>
-                            <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="{{ route('siteadmin.mathematics') }}">@lang('translation.Add_Curriculum')</a></li>
-                                <li><a href="{{ route('siteadmin.mathematics') }}">@lang('translation.Curriculum')</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li> -->
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-comment-alt-dots "></i>
-                        <span>@lang('translation.Manage_Curriculum')</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('siteadmin.curriculum.index') }}">@lang('translation.Curriculum')</a></li>
-                        <li><a href="{{ route('siteadmin.curriculum.create') }}">@lang('translation.Add_Curriculum')</a></li>
-                    </ul>
-                </li>
-
-
-                <!-- <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="uil-book-open"></i>
-                        <span>@lang('translation.Manage_Curriculum')</span>
+                        <span>@lang('translation.Manage_Subject')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.English')</a>
+                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Subject')</a>
                             <ul class="sub-menu" aria-expanded="true">
-                            <li><a href="{{ route('siteadmin.mathematics') }}">@lang('translation.Add_Curriculum')</a></li>
-                                <li><a href="{{ route('siteadmin.mathematics') }}">@lang('translation.Curriculum')</a></li>
+                            <li><a href="{{ route('siteadmin.subjects.index') }}">@lang('translation.View_Subject')</a></li>
+                                <li><a href="{{ route('siteadmin.subjects.create') }}">@lang('translation.Add_Subject')</a></li>
                             </ul>
                         </li>
-                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Mathematics')</a>
+                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Learning_Outcome')</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="{{ route('siteadmin.mathematics') }}">@lang('translation.Add_Curriculum')</a></li>
-                                <li><a href="{{ route('siteadmin.mathematics') }}">@lang('translation.Curriculum')</a></li>
+                                <li><a href="{{ route('siteadmin.learning_outcomes.index') }}">@lang('translation.View_Learning_Outcome')</a></li>
+                                <li><a href="{{ route('siteadmin.learning_outcomes.create') }}">@lang('translation.Add_Learning_Outcome')</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Topic')</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('siteadmin.topics.index') }}">@lang('translation.View_Topic')</a></li>
+                                <li><a href="{{ route('siteadmin.topics.create') }}">@lang('translation.Add_Topic')</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Sub_Topic')</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('admin.sub_topics.index') }}">@lang('translation.View_Sub_Topic')</a></li>
+                                <li><a href="{{ route('admin.sub_topics.create') }}">@lang('translation.Add_Sub_Topic')</a></li>
                             </ul>
                         </li>
                     </ul>
-                </li> -->
+                </li>
 
 
                 <li>
@@ -149,13 +112,19 @@
                 </li>
 
 
-
                 <li>
-                    <a href="" class="waves-effect">
-                        <i class="uil-calendar-alt"></i>
-                        <span>@lang('translation.Events')</span>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="uil-comment-alt-question"></i>
+                        <span>@lang('translation.Blog')</span>
                     </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('siteadmin.faq.index') }}">@lang('translation.All_FAQs')</a></li>
+                        <li><a href="{{ route('siteadmin.faq.create') }}">@lang('translation.Add_FAQs')</a></li>
+                    </ul>
                 </li>
+
+
+
 
                 <!-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

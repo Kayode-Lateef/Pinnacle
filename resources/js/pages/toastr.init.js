@@ -1,13 +1,5 @@
 
 
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Toastr init js
-*/
-
 $(function () {
         var i = -1;
         var toastCount = 0;

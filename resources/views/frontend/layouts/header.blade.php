@@ -81,6 +81,7 @@
                         <li><a class="" href="{{ route('testimonial') }}">Testimonials</a></li>
                         <li><a class="" href="{{ route('faq') }}">FAQ</a></li>
                         <li><a href="{{ route('book-assessment') }}">Book Assessment</a></li>
+                        <li><a href="{{ route('blog') }}">Blog</a></li>
                         <li><a href="{{ route('contact') }}">Contact Us</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->

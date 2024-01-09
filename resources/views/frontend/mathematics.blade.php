@@ -46,27 +46,15 @@
 
                         <!-- Thumbnail -->
                         <div class="thumb">
-                            <img src="{{ asset('source/assets/img/math.webp') }}" alt="Thumb">
+                            @if($mathematics && $mathematics->cover_image)
+                                <img src="{{ asset('storage/'.$mathematics->cover_image) }}" alt="Mathematics Cover Image">
+                            @endif
                         </div>
                         <!-- End Thumbnail -->
 
                         <!-- Course Meta -->
                         <div class="course-meta">
-                            <div class="item author">
-                                <div class="thumb">
-                                    <a href="#"><img alt="Thumb" src="{{ asset('source/assets/img/100x100.png') }}"></a>
-                                </div>
-                                <div class="desc">
-                                    <h4>Tutor</h4>
 
-                                    <span>
-                                        @foreach ($curriculum as $curriculumItem)
-                                        {{ $curriculumItem->tutor_name }}
-                                        @endforeach
-                                    </span>
-
-                                </div>
-                            </div>
                             <div class="item category">
                                 <h4>Subject</h4>
                                 <span>Mathematics</span>
@@ -100,17 +88,19 @@
                             <div id="tab1" class="tab-pane fade active in">
                                 <div class="info title">
                                     <h4>Subjects Description</h4>
-                                    @foreach ($curriculum as $curriculumItem)
-                                    <p>{{ strip_tags($curriculumItem->description) }}</p>
-                                    @endforeach
+
+                                    <p>
+                                        {{ strip_tags($mathematics ? $mathematics->description : 'Description not available') }}
+                                    </p>
+
 
                                     <h4>Learning Outcomes</h4>
                                     <ul>
-                                        @foreach ($curriculum as $curriculumItem)
-                                            @foreach(json_decode($curriculumItem->learning_outcomes, true) as $key => $value)
-                                                <li><i class="fas fa-check-double"></i> {{ $value }}</li>
-                                            @endforeach
-                                        @endforeach
+                                    @forelse($mathematicsOutcomes as $outcome)
+                                    <li><i class="fas fa-check-double"></i>{{ strip_tags($outcome->description) }}</li>
+                                    @empty
+                                        <p>No learning outcomes available for Mathematics.</p>
+                                    @endforelse
 
                                     </ul>
                                 </div>
@@ -121,81 +111,52 @@
                             <div id="tab2" class="tab-pane fade">
                                 <div class="info title">
 
-                                    @foreach ($curriculum as $curriculumItem)
-                                        <p>{{ strip_tags($curriculumItem->description) }}</p>
-                                    @endforeach
+                                        <p>
+                                        {{ strip_tags($mathematics ? $mathematics->description : 'Description not available') }}
+                                        </p>
 
-                                    <h4>Topics Covered</h4>
+
+                                    <h4>Topics</h4>
                                     <!-- Start Course List -->
+
                                     <div class="course-list-items acd-items acd-arrow">
+                                    @if($mathematicsTopics->isNotEmpty())
                                         <div class="panel-group symb" id="accordion">
-                                            @foreach ($curriculum as $curriculumItem)
+                                            @foreach($mathematicsTopics as $topic)
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <h4 class="panel-title">
-                                                        <a data-toggle="collapse" data-parent="#accordion" href="#ac-{{ $curriculumItem->id }}">
-                                                           {{ $curriculumItem->unit_name }}
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#ac-{{ $topic->id }}">
+                                                            {{ $topic->name }}
                                                         </a>
                                                     </h4>
                                                 </div>
-                                                <div id="ac-{{ $curriculumItem->id }}" class="panel-collapse collapse in">
+                                                <div id="ac-{{ $topic->id }}" class="panel-collapse collapse in">
                                                     <div class="panel-body">
+                                                        @if($topic->subtopics->isNotEmpty())
                                                         <ul>
+                                                         @foreach($topic->subtopics as $subtopic)
                                                             <li>
                                                                 <div class=" item title">
-                                                                    <h5>{{ $curriculumItem->topic_name }}</h5>
+                                                                    <h5>{{ $subtopic->name }}</h5>
                                                                 </div>
                                                             </li>
-                                                            <!-- <li>
-
-                                                                <div class="item title">
-                                                                    <h5>Probability</h5>
-                                                                </div>
-
-                                                            </li> -->
+                                                            @endforeach
                                                         </ul>
+                                                        @else
+                                                            <p>No subtopics available for this topic.</p>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
                                             @endforeach
                                         </div>
+                                        @else
+                                        <p>No topics available for Mathematics.</p>
+                                    @endif
                                     </div>
                                     <!-- End Course List -->
 
-
-                                    <!-- Start Course List -->
-                                    <!-- <div class="course-list-items acd-items acd-arrow">
-                                        <div class="panel-group symb" id="accordion">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a data-toggle="collapse" data-parent="#accordion" href="#ac2">
-                                                            Algebra
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="ac2" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                        <ul>
-                                                            <li>
-                                                                    <div class=" item title">
-                                                                        <h5>Factorisation</h5>
-                                                                    </div>
-                                                            </li>
-                                                            <li>
-
-                                                                <div class="item title">
-                                                                    <h5>Expansion</h5>
-                                                                </div>
-
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- End Course List -->
                                 </div>
                             </div>
                             <!-- End Single Tab -->
@@ -223,10 +184,10 @@
                             <div class="sidebar-info">
                                 <ul>
                                     <li>
-                                        <a href="mathematics">Mathematics</a>
+                                        <a href="{{ route('mathematics') }}">Mathematics</a>
                                     </li>
                                     <li>
-                                        <a href="english">English</a>
+                                        <a href="{{ route('english') }}">English</a>
                                     </li>
 
                                 </ul>

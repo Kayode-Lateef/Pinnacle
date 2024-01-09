@@ -1,10 +1,4 @@
-/* ===================================================================
-    
-    Author          : Valid Theme
-    Template Name   : Educates - Education and LMS Template
-    Version         : 1.2
-    
-* ================================================================= */
+
 (function($) {
     "use strict";
 
@@ -409,7 +403,7 @@
                     $('#message').hide();
 
                     $('#submit')
-                        .after('<img src="assets/img/ajax-loader.gif" class="loader" />')
+                        .after('<img src="../source/assets/img/ajax-loader.gif" class="loader" />')
                         .attr('disabled', 'disabled');
 
                     $.post(action, {

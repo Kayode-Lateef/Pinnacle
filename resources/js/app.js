@@ -1,11 +1,3 @@
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Version: 2.4.0
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Main Js File
-*/
 
 
 (function ($) {
@@ -258,7 +250,7 @@ File: Main Js File
         $("input[name='layout']").on('change', function () {
             window.location.href = ($(this).val() == "vertical") ? "index.html": "layouts-horizontal.html";
         });
-        
+
         // on layout mode change
         $("input[name='layout-mode']").on('change', function () {
             if($(this).val() == "light") {

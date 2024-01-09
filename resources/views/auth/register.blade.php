@@ -8,7 +8,7 @@ Register
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <a href="{{ url('index') }}" class="mb-5 d-block auth-logo">
+                    <a href="{{ route('home') }}" class="mb-5 d-block auth-logo">
                         <img src="{{ URL::asset('/assets/images/logo-2.png') }}" alt="" height="22" class="logo logo-dark">
                         <img src="{{ URL::asset('/assets/images/logo-2-white.png') }}" alt="" height="22" class="logo logo-light">
                     </a>
@@ -23,7 +23,7 @@ Register
 
                         <div class="text-center mt-2">
                             <h5 class="text-primary">Register Account</h5>
-                            <p class="text-muted">Get your free Minible account now.</p>
+                            <p class="text-muted">Get your free Pinnacle account now.</p>
                         </div>
                         <div class="p-2 mt-4">
                             <form method="POST" action="{{ route('register') }}">
@@ -72,7 +72,7 @@ Register
 
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="auth-terms-condition-check">
-                                    <label class="form-check-label" for="auth-terms-condition-check">I accept <a href="javascript: void(0);" class="text-dark">Terms and
+                                    <label class="form-check-label" for="auth-terms-condition-check">I accept <a href="{{ route('terms') }}" class="text-dark">Terms and
                                             Conditions</a></label>
                                 </div>
 
@@ -116,7 +116,7 @@ Register
                 <div class="mt-5 text-center">
                     <p>© <script>
                             document.write(new Date().getFullYear())
-                        </script> Minible. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                        </script> Pinnacle
                 </div>
 
             </div>

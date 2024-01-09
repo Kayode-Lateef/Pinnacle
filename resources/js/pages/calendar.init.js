@@ -1,10 +1,3 @@
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Calendar init js
-*/
 
 !function($) {
     "use strict";
@@ -14,7 +7,7 @@ File: Calendar init js
     CalendarPage.prototype.init = function() {
 
 
-                       
+
             var addEvent=$("#event-modal");
             var modalTitle = $("#modal-title");
             var formEvent = $("#form-event");
@@ -107,7 +100,7 @@ File: Calendar init js
                 modalTitle.text('Add Event');
                 newEventData = info;
             }
-            
+
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: [ 'bootstrap', 'interaction', 'dayGrid', 'timeGrid'],
@@ -137,7 +130,7 @@ File: Calendar init js
                 events : defaultEvents
             });
             calendar.render();
-            
+
              /*Add new event*/
             // Form to add new event
 
@@ -146,7 +139,7 @@ File: Calendar init js
                 var inputs = $('#form-event :input');
                 var updatedTitle = $("#event-title").val();
                 var updatedCategory =  $('#event-category').val();
-                
+
                 // validation
                 if (forms[0].checkValidity() === false) {
                         event.preventDefault();
@@ -186,7 +179,7 @@ File: Calendar init js
     $.CalendarPage = new CalendarPage, $.CalendarPage.Constructor = CalendarPage
 }(window.jQuery),
 
-//initializing 
+//initializing
 function($) {
     "use strict";
     $.CalendarPage.init()

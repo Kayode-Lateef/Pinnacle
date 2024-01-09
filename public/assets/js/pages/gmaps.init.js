@@ -3,13 +3,7 @@ var __webpack_exports__ = {};
 /*!******************************************!*\
   !*** ./resources/js/pages/gmaps.init.js ***!
   \******************************************/
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: gmaps init Js File
-*/
+
 var map;
 $(document).ready(function () {
   // Markers

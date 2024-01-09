@@ -3,13 +3,7 @@ var __webpack_exports__ = {};
 /*!**************************************************!*\
   !*** ./resources/js/pages/form-advanced.init.js ***!
   \**************************************************/
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Form Advanced Js File
-*/
+
 !function ($) {
   "use strict";
 

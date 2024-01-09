@@ -3,13 +3,7 @@ var __webpack_exports__ = {};
 /*!*******************************************!*\
   !*** ./resources/js/pages/rating-init.js ***!
   \*******************************************/
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Rating Js File
-*/
+
 $(document).ready(function () {
   // Default rating
   $('#example-rating').barrating({

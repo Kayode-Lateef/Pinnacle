@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Testimonial;
+use App\Models\Subject;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\App;
@@ -45,7 +47,10 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        return view('admin.index');
+        $totalUsers = User::count(); // Count total Users
+        $totalsubjects = Subject::count(); // Count total Users
+        $totaltopics = Topic::count(); // Count total Users
+        return view('admin.index', compact('totalUsers', 'totalsubjects', 'totaltopics'));
     }
 
     public function profile()

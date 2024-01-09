@@ -41,13 +41,6 @@
                     </a>
                 </li>
 
-                <!-- <li>
-                    <a href="{{ route('admin.profile') }}" class="waves-effect">
-                        <i class="uil-user"></i>
-                        <span>@lang('translation.Profile')</span>
-                    </a>
-                </li> -->
-
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -55,26 +48,54 @@
                         <span>@lang('translation.Manage_Subject')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.English')</a>
+                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Subject')</a>
                             <ul class="sub-menu" aria-expanded="true">
-                            <li><a href="{{ route('admin.mathematics') }}">@lang('translation.Add_Curriculum')</a></li>
-                                <li><a href="{{ route('admin.mathematics') }}">@lang('translation.Curriculum')</a></li>
+                            <li><a href="{{ route('admin.subjects.index') }}">@lang('translation.View_Subject')</a></li>
+                                <li><a href="{{ route('admin.subjects.create') }}">@lang('translation.Add_Subject')</a></li>
                             </ul>
                         </li>
-                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Mathematics')</a>
+                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Learning_Outcome')</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="{{ route('admin.mathematics') }}">@lang('translation.Add_Curriculum')</a></li>
-                                <li><a href="{{ route('admin.mathematics') }}">@lang('translation.Curriculum')</a></li>
+                                <li><a href="{{ route('admin.learning_outcomes.index') }}">@lang('translation.View_Learning_Outcome')</a></li>
+                                <li><a href="{{ route('admin.learning_outcomes.create') }}">@lang('translation.Add_Learning_Outcome')</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Topic')</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('admin.topics.index') }}">@lang('translation.View_Topic')</a></li>
+                                <li><a href="{{ route('admin.topics.create') }}">@lang('translation.Add_Topic')</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript: void(0);" class="has-arrow">@lang('translation.Sub_Topic')</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('admin.sub_topics.index') }}">@lang('translation.View_Sub_Topic')</a></li>
+                                <li><a href="{{ route('admin.sub_topics.create') }}">@lang('translation.Add_Sub_Topic')</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="{{ route('admin.testimonials') }}" class="waves-effect">
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="uil-comment-alt-dots "></i>
                         <span>@lang('translation.Testimonials')</span>
                     </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('admin.testimonial.index') }}">@lang('translation.All_Testimonials')</a></li>
+                        <li><a href="{{ route('admin.testimonial.create') }}">@lang('translation.Add_Testimonials')</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="uil-comment-alt-question"></i>
+                        <span>@lang('translation.FAQs')</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('admin.faq.index') }}">@lang('translation.All_FAQs')</a></li>
+                        <li><a href="{{ route('admin.faq.create') }}">@lang('translation.Add_FAQs')</a></li>
+                    </ul>
                 </li>
 
                 <li>

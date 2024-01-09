@@ -78,9 +78,12 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->role }}</td>
                             <td>
-                            <button type="button" class="btn btn-info waves-effect waves-light"><i class="mdi mdi-pencil"></i> Edit</button>
-                            <button type="button" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-delete"></i> Delete</button>
-                                <!-- Add action buttons here (edit, delete, etc.) -->
+                            <a  href="{{ route('siteadmin.editUser', $user->id) }}" type="button" class="btn btn-info waves-effect waves-light"><i class="mdi mdi-pencil"></i></a>
+                            <form action="{{ route('siteadmin.deleteUser', $user->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger waves-effect waves-light"  onclick="return confirm('Are you sure you want to delete this User?');"><i class="mdi mdi-delete"></i></button>
+                            </form>
                             </td>
                         </tr>
                         @endforeach
@@ -104,6 +107,12 @@
 
 @endsection
 @section('script')
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
 <script src="{{ URL::asset('/assets/libs/datatables/datatables.min.js') }}"></script>
 <script src="{{ URL::asset('/assets/libs/jszip/jszip.min.js') }}"></script>
 <script src="{{ URL::asset('/assets/libs/pdfmake/pdfmake.min.js') }}"></script>

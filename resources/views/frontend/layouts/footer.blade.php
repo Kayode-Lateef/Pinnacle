@@ -80,15 +80,18 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-6">
-                        <p>&copy; Copyright 2019. All Rights Reserved | <a href="#">kaytechIT</a></p>
+                        <p>&copy; <script>
+                                document.write(new Date().getFullYear())
+
+                            </script>. All Rights Reserved | <a href="https://www.kaytechit.com">kaytechIT</a></p>
                     </div>
                     <div class="col-md-6 text-right link">
                         <ul>
                             <li>
-                                <a href="#">Terms</a>
+                                <a href="{{ route('terms') }}">Terms</a>
                             </li>
                             <li>
-                                <a href="#">Privacy</a>
+                                <a href="{{ route('privacy') }}">Privacy</a>
                             </li>
 
                         </ul>

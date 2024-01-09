@@ -1,10 +1,4 @@
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: ChartJs init Js File
-*/
+
 
 function getChartColorsArray(chartId) {
     if (document.getElementById(chartId) !== null) {

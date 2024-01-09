@@ -3,13 +3,7 @@ var __webpack_exports__ = {};
 /*!**********************************************!*\
   !*** ./resources/js/pages/dashboard.init.js ***!
   \**********************************************/
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: support@themesbrand.com
-File: Dashboard
-*/
+
 // get colors array from the string
 function getChartColorsArray(chartId) {
   if (document.getElementById(chartId) !== null) {
@@ -134,7 +128,7 @@ if (RadialchartOrdersChartColors) {
   };
   var chart = new ApexCharts(document.querySelector("#orders-chart"), options);
   chart.render();
-} // 
+} //
 // Customers Chart
 //
 
@@ -175,7 +169,7 @@ if (RadialchartCustomersColors) {
   };
   var chart = new ApexCharts(document.querySelector("#customers-chart"), options);
   chart.render();
-} // 
+} //
 // Growth Chart
 //
 

@@ -3,13 +3,7 @@ var __webpack_exports__ = {};
 /*!************************************************!*\
   !*** ./resources/js/pages/leaflet-map.init.js ***!
   \************************************************/
-/*
-Template Name: Minible - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: leaflet init js
-*/
+
 // leaflet-map
 var mymap = L.map('leaflet-map').setView([51.505, -0.09], 13);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
